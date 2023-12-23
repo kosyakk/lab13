@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link type="text/css" href="{{ url_for('static', filename='styles.css')}}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../../static/styles.css">
+    <script src="../../static/script.js"></script>
+    <title>lab13</title>
+    
+</head>
+<body>
+    <header>
+        <h3 class="h1-header">Backend3</h3>
+        <a class="button-header" href="/">Home</a>
+        <a class="button-header" href="/Mockups">Mockups</a>
+    </header>
+    <div class="content">
+        <div class="main-header">Quiz</div>
+        <form action="{{url_for('addvalue')}}" method="post">
+            <input type="text" readonly style="border: none;font-size: 2vh; font-weight: 700;" value="" class="example" name="example">
+            <div>
+                <input type="number" class="input-answer" name = "answer">
+            </div>
+            <div>
+                <a href="/Mockups/Quiz?type=quiz"><button class="next-btn" type ="submit" data-type="0">Next</button></a>
+                <a href="/Mockups/Quiz?type=results"><button class="finish-btn" type="submit" data-type="0">Finish</button></a>
+                <input type="text" style="display: none;" name="check" class="check">
+            </div>
+        </form>
+    </div>
+    <div class="line"></div>
+    
+    <footer>© 2023 - Backend3</footer>
+</body>
+</html>
